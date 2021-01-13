@@ -20,7 +20,8 @@ Note: Create the directories if they don't exists.
 
 
 ## Modify harbor.yml file
-1. Edit the hostname to your domain_name or host IP address. 
+Rename the harbor.yml.tmp to harbor.yml and proceed with the following steps:
+1.Edit the hostname to your domain_name or host IP address. 
 E.g.,
 ```yml
 hostname: 192.168.0.160

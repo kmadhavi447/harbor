@@ -32,7 +32,7 @@ E.g.,
  https:
     port: 443
     certificate: /etc/ssl/certs/harbor-selfsigned.crt
-    private_key: /etc/ssl/private/harbor-selfsigned.key>
+    private_key: /etc/ssl/private/harbor-selfsigned.key
 ```
 3. Modify the internal_tls section, so as to make harbor work with TLS.
     * Set *enabled* to true, for enabling tls support to harbor

@@ -32,7 +32,7 @@ E.g.,
  https:
     port: 443
     certificate: /etc/ssl/certs/harbor-selfsigned.crt
-    private_key: /etc/ssl/private/harbor-selfsigned.key
+    private_key: /etc/ssl/private/harbor-selfsigned.key>
 ```
 3. Modify the internal_tls section, so as to make harbor work with TLS.
     * Set *enabled* to true, for enabling tls support to harbor
@@ -63,6 +63,8 @@ This script will install harbor and its other services using docker-compose.
 From browser, goto https://your-ip-address or https://your-domain-name 
 E.g.,
 https://192.168.0.160
+![alt text]( harbor.png ) 
+
 
 **Ensure Harbor is accessing from docker**
 Run the following command to access harbor private repository from docker:
@@ -70,7 +72,7 @@ Run the following command to access harbor private repository from docker:
 sudo docker login 192.168.0.160
 ```
 Enter admin credentials which are defined in harbor.yml file. Ensure the login is successful.
-
+![alt text]( docker_login.png ) 
 
 # Forcing docker clients to trust the hosted harbor private repository:
 1. Edit or Create /etc/docker/daemon.json with the following content on docker clients running on other machines to access harbor private repository.

@@ -2,7 +2,9 @@
 
 ## Download Harbor installer
 1. Download the online latest and stable release of Harbor from https://github.com/goharbor/harbor/releases/
-2. Extract the online installer file to your local machine to a e.g., ~/harbor
+2. Extract the online installer file to your local machine to a e.g., ~/harbor. The file structure of the extracted harbor online installer appears as shown in the below image:
+
+![alt text]( harbor_files.png )
 
 ## SSL Certificate Generation
 Run the following command to generate self seigned SSL certificate and key to access harbor with HTTPS access:

@@ -1,0 +1,32 @@
+---
+- name: Setting up docker clients for trusting the private registry
+  become: true
+  hosts: all
+  remote_user: nvidia
+
+  tasks:
+
+    - name: Copy daemon.json file to /etc/docker
+      copy:
+        src: ./daemon.json
+        dest: /etc/docker/daemon.json
+    
+    - name: Restart Docker service
+      service: 
+        name: docker
+        state: restarted
+
+    - name: Installing python docker module
+      pip:
+        name: docker
+
+    - name: Login to private docker registry
+      community.general.docker_login:
+        registry_url: https://192.168.0.160
+        username: admin
+        password: Harbor12345
+
+    - name: Logout from private docker registry
+      community.general.docker_login:
+        state: absent
+      

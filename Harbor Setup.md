@@ -99,7 +99,7 @@ To run the above procedure for forcing docker clients to trust the hosted harbor
 
 ## Using Ansible playbook for forcing all the docker clients to trust harbor private repository
 1. Get the list of IP address of all the machines running docker client.
-2. Copy the list of IP address in to /etc/docker/hosts
+2. Copy the list of IP address in to /etc/ansible/hosts
 E.g.,
 ```yml
 [all]
